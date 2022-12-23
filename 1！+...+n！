@@ -7,7 +7,7 @@ int main(void) {
 	for (int i = 1; i <= n; i++) {
 		for (int j = 1; j <= i; j++)
 			ret = j * ret;
-		sum = sum + m;
+		sum = sum + ret;
 		ret = 1;
 	}
 	printf("%d", sum);
