@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<Windows.h>
+#include<stdlib.h>
+int main(void) {
+	char ar1[] =  "Hello,World!";
+	char ar2[] = {"############"};
+	//int right = sizeof(ar1) / sizeof(ar1[0])-1;
+	int right = strlen(ar2);
+	int left = 0;
+	do {
+		printf("%s\n",ar2);
+		Sleep(1000);
+		system("cls");
+		ar2[left] = ar1[left];
+		ar2[right - 1] = ar1[right - 1];
+		right--;
+		left++;
+		
+	} while (left <= right);
+	printf("%s\n", ar2);
+	return 0;
+}
