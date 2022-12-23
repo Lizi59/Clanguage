@@ -1,3 +1,4 @@
+//第一种方式
 #include<stdio.h>
 int main(void) {
 	int n = 0;
@@ -9,6 +10,22 @@ int main(void) {
 			ret = j * ret;
 		sum = sum + ret;
 		ret = 1;
+	}
+	printf("%d", sum);
+	return 0;
+}
+
+
+//第二种方式（优化）
+#include<stdio.h>
+int main(void) {
+	int n = 0;
+	int ret = 1;
+	int sum = 0;
+	scanf_s("%d", &n);
+	for (int i = 1; i <= n; i++) {
+	        ret = i * ret;
+		sum = sum + ret;
 	}
 	printf("%d", sum);
 	return 0;
