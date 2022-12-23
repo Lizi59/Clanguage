@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(void) {
+	int n = 0;
+	int m=1;
+	scanf_s("%d", &n);
+	for (int i = 1; i <= n; i++) {
+			m = i * m;
+	}
+	printf("%d", m);
+	return 0;
+}
