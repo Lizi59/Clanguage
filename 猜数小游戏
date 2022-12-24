@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>                 //srand()函数的头文件
+void game() {
+	int ret = 0;
+	srand((unsigned int)time(NULL)); //通过时间戳来获得一个未知数（0-0x7fff）
+	ret = rand() % 100 + 1;          //将上面得到的一个大数字转化成一个1-100之间的数
+	while (1) {
+		int guess = 0;
+		scanf_s("%d",&guess);
+		if (guess > ret) {
+			printf("猜大了\n");
+		}
+		else if (guess < ret) {
+			printf("猜小了\n");
+		}
+		else{
+			printf("猜对了\n");
+			break;
+		}
+	}
+}
+int main() {
+	int input=0;
+	do {
+		printf("欢迎进入,输入0退出游戏\n");
+		scanf_s("%d", &input);
+		if (input == 0) {
+			break;
+		}
+		else {
+			game();                      //调用game()函数
+		}
+	} while (input);                 //判断输入的input数，~0则继续游戏
+  return 0;
+}
