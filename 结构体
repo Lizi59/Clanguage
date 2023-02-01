@@ -1,0 +1,17 @@
+typedef 
+
+typedef struct Stu
+{
+    //成员变量。并没有内存空间的占用
+    char name[20];
+    short age;
+    char tele[12];
+    char sex[5];
+}Stu;
+
+int main()
+{
+    struct Stu s1;//局部变量
+    Stu s2;       // s1 s2都能正常进行创建
+    //此时开辟内存空间
+}
