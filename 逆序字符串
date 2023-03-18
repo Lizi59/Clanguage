@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+
+void reverse(char* str) 
+{
+	assert(str);
+	int len = strlen(str);
+	char* left = str;
+	char* right = str + len - 1;
+	while (left < right)
+	{
+		char tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;
+	}
+
+}
+int main() 
+{
+	char arr[256] = {0};
+	scanf_s("%s", arr,256);
+	reverse(arr);
+	printf_s("%s\n", arr);
+	return 0;
+}
+
+
+
+
+//其中。scanf_s函数需要+("%s",数组名,数组长度)，否则会出现以下报错
+//0x6377EF8C (ucrtbased.dll)处(位于 Hello world.exe 中)引发的异常: 0xC0000005: 写入位置 0x00D00000 时发生访问冲突
