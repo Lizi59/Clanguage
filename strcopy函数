@@ -1,0 +1,31 @@
+//未优化
+void my_strcopy(char* dest,char* src)
+{
+	assert(dest != NULL);
+	assert(src != NULL);
+
+	while (*src!='\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = *src;
+	return 0;
+}
+
+
+
+//优化
+void my_strcopy(char* dest,char* src)
+{
+	assert(dest != NULL);
+	assert(src != NULL);
+  
+	while (*dest++=*src++)
+	{
+  ;
+	}
+
+	return 0;
+}
