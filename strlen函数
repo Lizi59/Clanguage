@@ -10,3 +10,17 @@ int my_strlen(const char* arr)  //库函数strlen返回的是size_t：无符号�
 	}
 	return count;
 }
+
+//2.递归方法
+int my_strlen(const char* arr)
+{
+	//assert(arr != NULL);
+	if (*arr == '\0')
+	{
+		return 0;
+	}
+	else
+	{
+		return 1 + my_strlen(arr + 1); //当字符串为ab\0
+	}
+}
