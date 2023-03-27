@@ -1,0 +1,12 @@
+//1.计数器方法
+int my_strlen(const char* arr)  //库函数strlen返回的是size_t：无符号数 此处可以修改
+{
+	assert(arr != NULL);
+	int count = 0;
+	while (*arr!='\0')
+	{
+		count++;
+		arr++;
+	}
+	return count;
+}
