@@ -17,15 +17,16 @@ void my_strcopy(char* dest,char* src)
 
 
 //优化
-void my_strcopy(char* dest,char* src)
+char* my_strcopy(char* dest,const char* src)
 {
 	assert(dest != NULL);
 	assert(src != NULL);
+	char* ret=dest; //记录目的空间的起始地址
   
 	while (*dest++=*src++)
 	{
   ;
 	}
-
-	return 0;
+	//返回目的空间的起始地址
+	return ret;
 }
