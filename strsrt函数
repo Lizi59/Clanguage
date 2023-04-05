@@ -7,12 +7,12 @@ char* my_strstr(const char* p1, const char* p2)
 	char* cur = p1;
 	if (*p2 == '\0')
 	{
-		return p1;
+		return (char*)p1;
 	}
 	while (*cur)
 	{
 		s1 = cur;
-		s2 = p2;
+		s2 = (char*)p2;
 		while ((*s1 !='\0')&&(*s2 !='\0')&&(*s1==*s2))
 		{
 			s1++;
