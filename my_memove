@@ -1,0 +1,26 @@
+void* my_memove(void* dest, const void* src, size_t count)
+{
+	void* ret = dest;
+	assert(dest != NULL);
+	assert(src != NULL);
+
+	if (dest < src)
+	{
+		//前->后
+		while (count--)
+		{
+			*(char*)dest = *(char*)src;
+			++(char*)dest;
+			++(char*)src;
+		}
+	}
+	else
+	{
+		//后_>前
+		while (count--)
+		{
+			*((char*)dest + count) = *((char*)src + count);
+		}
+	}
+	return ret;
+}
