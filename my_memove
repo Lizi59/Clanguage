@@ -19,7 +19,7 @@ void* my_memove(void* dest, const void* src, size_t count)
 		//后_>前
 		while (count--)
 		{
-			*((char*)dest + count) = *((char*)src + count);
+			*((char*)dest + count) = *((char*)src + count);//找到最后一个字节，从后往前
 		}
 	}
 	return ret;
